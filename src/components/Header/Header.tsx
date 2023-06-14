@@ -41,41 +41,40 @@ const Header = () => {
   return (
     <Container padding={padding}>
       <SiteLogo>
-        {/* <img src="a" alt="logo" /> */}
-        StoneDev
+        <img src={images.logo} alt="logo" />
       </SiteLogo>
       {screenWidth > 1000 ? (
         <NavContainer>
           <NavButtons
-            isActive={isActive === "Home"}
-            onClick={() => handleNavClick("Home")}
+            isActive={isActive === "Nerdweb"}
+            onClick={() => handleNavClick("Nerdweb")}
           >
-            Home
+            Nerdweb
           </NavButtons>
           <NavButtons
-            isActive={isActive === "About"}
-            onClick={() => handleNavClick("About")}
+            isActive={isActive === "Serviços"}
+            onClick={() => handleNavClick("Serviços")}
           >
-            About me
+            Serviços
           </NavButtons>
           <NavButtons
-            isActive={isActive === "Projects"}
-            onClick={() => handleNavClick("Projects")}
+            isActive={isActive === "Blog"}
+            onClick={() => handleNavClick("Blog")}
           >
-            Projects
+            Blog
           </NavButtons>
           <NavButtons
-            isActive={isActive === "Contact"}
-            onClick={() => handleNavClick("Contact")}
+            isActive={isActive === "Atendimento"}
+            onClick={() => handleNavClick("Atendimento")}
           >
-            Contact
+            Atendimento
           </NavButtons>
         </NavContainer>
       ) : (
         <>
           {!menuOpen ? (
             <img
-              src={images.menu}
+              src={images.logo}
               alt="="
               style={{ width: "30px" }}
               onClick={() => setMenuOpen(!menuOpen)}

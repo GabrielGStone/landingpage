@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 126.656%;
+  width: 100vw;
   margin-left: -10vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 250px;
   color: #fff;
-  background-color: #000;
+  background-color: #283137;
   margin-top: 40px;
   font-size: 24px;
   font-weight: 600;
@@ -33,4 +33,10 @@ export const ContactIcon = styled.img`
   border-radius: 50%;
   /* -webkit-filter: invert(100%); /* Safari/Chrome */
   /* filter: invert(100%); */
+`;
+
+export const SiteLogo = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
 `;

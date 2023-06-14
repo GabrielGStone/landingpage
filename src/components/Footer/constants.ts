@@ -1,7 +1,5 @@
-import insta from "../../assets/insta.svg";
-import linked from "../../assets/linked.svg";
+import logo2 from "../../assets/logo2.png";
 
 export const images = {
-  insta,
-  linked,
+  logo2,
 };
