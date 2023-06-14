@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 98vw;
+  /* width: 98vw; */
   max-width: 100vw;
   min-height: 100vh;
   @media (max-width: 1000px) {
@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 0 10vw;
+  padding: 0 15vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -1,23 +1,25 @@
 import styled from "styled-components";
 
 interface ContainerProps {
-  padding: string;
+  justify: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
+  border-bottom: 3px solid #71d8ff;
+  width: 70vw;
+  margin-left: -15vw;
+  padding: 0 15vw;
+  height: 62px;
   background-color: #fff;
-  padding: ${({ padding }) => padding};
   top: 0;
   position: sticky;
   position: -webkit-sticky;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: ${({ justify }) => (justify ? "" : "space-between")};
   transition: padding 0.2s ease-out;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   @media (max-width: 1000px) {
-    padding: ${({ padding }) => (Number(padding) > 40 ? "5px" : "10px")};
   }
 `;
 
@@ -44,7 +46,7 @@ export const SiteLogo = styled.div`
 
 export const NavContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  margin-left: 59px;
   @media (max-width: 1000px) {
   }
 `;
@@ -55,8 +57,8 @@ interface navProps {
 
 export const NavButtons = styled.div<navProps>`
   cursor: pointer;
-  padding: 15px 20px;
   font-size: 16px;
+  margin-right: 24px;
   color: ${({ isActive }) => (isActive ? "#0D47A1" : "#000")};
   @media (max-width: 1000px) {
     font-size: 32px;

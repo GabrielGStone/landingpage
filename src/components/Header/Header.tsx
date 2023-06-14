@@ -4,22 +4,11 @@ import Menu from "./Menu";
 import { Container, NavButtons, NavContainer, SiteLogo } from "./styles";
 
 const Header = () => {
-  const [padding, setPadding] = useState("24px 10%");
   const [isActive, setIsActive] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 120) {
-        setPadding("10px 10%");
-      } else {
-        setPadding("24px 10%");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
@@ -27,7 +16,6 @@ const Header = () => {
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -39,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <Container padding={padding}>
+    <Container justify={screenWidth > 1000}>
       <SiteLogo>
         <img src={images.logo} alt="logo" />
       </SiteLogo>
