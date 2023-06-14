@@ -58,20 +58,16 @@ interface navProps {
 export const NavButtons = styled.div<navProps>`
   cursor: pointer;
   font-size: 16px;
-  margin-right: 24px;
   color: ${({ isActive }) => (isActive ? "#0D47A1" : "#000")};
   @media (max-width: 1000px) {
     font-size: 32px;
   }
 `;
 export const MenuNavButtons = styled.div<navProps>`
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
   cursor: pointer;
   padding: 15px 20px;
   font-size: 32px;
-  color: ${({ isActive }) => (isActive ? "#0D47A1" : "#000")};
+  color: ${({ isActive }) => (isActive ? "#0D47A1" : "#fff")};
   @media (max-width: 1000px) {
   }
 `;
@@ -96,24 +92,27 @@ export const MenuBar = styled.div`
 export const MenuNavContainer = styled.div`
   display: flex;
   align-items: flex-end;
-  width: 175px;
   height: 100vh;
+  width: 100vw;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #283137;
   position: absolute;
-  right: 0;
-  background-color: #fff;
+  color: #fff;
 `;
 
 export const CloseMenu = styled.div`
   cursor: pointer;
   display: flex;
-  width: 40px;
-  border-radius: 50%;
+  width: 50px;
   justify-content: center;
   align-items: center;
-  background-color: #dedede;
   :hover {
     background-color: #ccc;
   }
+`;
+
+export const HeaderIcon = styled.img`
+  width: 24px;
+  margin-left: 16px;
+  cursor: pointer;
 `;

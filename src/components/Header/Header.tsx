@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { images } from "./constants";
 import Menu from "./Menu";
-import { Container, NavButtons, NavContainer, SiteLogo } from "./styles";
+import {
+  Container,
+  HeaderIcon,
+  NavButtons,
+  NavContainer,
+  SiteLogo,
+} from "./styles";
 
 const Header = () => {
   const [isActive, setIsActive] = useState("");
@@ -61,12 +67,15 @@ const Header = () => {
       ) : (
         <>
           {!menuOpen ? (
-            <img
-              src={images.logo}
-              alt="="
-              style={{ width: "30px" }}
-              onClick={() => setMenuOpen(!menuOpen)}
-            />
+            <div>
+              <HeaderIcon src={images.account} alt="account" />
+              <HeaderIcon src={images.cart} alt="cart" />
+              <HeaderIcon
+                src={images.menu}
+                alt="="
+                onClick={() => setMenuOpen(!menuOpen)}
+              />
+            </div>
           ) : (
             <Menu setMenuOpen={setMenuOpen} />
           )}

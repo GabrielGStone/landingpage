@@ -27,28 +27,28 @@ const Menu: FC<menuProps> = ({ setMenuOpen }) => {
       <MenuNavContainer id="menu-bar">
         <CloseMenu onClick={() => handleCloseMenu()}>x</CloseMenu>
         <MenuNavButtons
-          isActive={isActive === "Home"}
-          onClick={() => handleNavClick("Home")}
+          isActive={isActive === "Nerdweb"}
+          onClick={() => handleNavClick("Nerdweb")}
         >
-          Home
+          Nerdweb
         </MenuNavButtons>
         <MenuNavButtons
-          isActive={isActive === "About"}
-          onClick={() => handleNavClick("About")}
+          isActive={isActive === "Serviços"}
+          onClick={() => handleNavClick("Serviços")}
         >
-          About me
+          Serviços
         </MenuNavButtons>
         <MenuNavButtons
-          isActive={isActive === "Projects"}
-          onClick={() => handleNavClick("Projects")}
+          isActive={isActive === "Blog"}
+          onClick={() => handleNavClick("Blog")}
         >
-          Projects
+          Blog
         </MenuNavButtons>
         <MenuNavButtons
-          isActive={isActive === "Contact"}
-          onClick={() => handleNavClick("Contact")}
+          isActive={isActive === "Atendimento"}
+          onClick={() => handleNavClick("Atendimento")}
         >
-          Contact
+          Atendimento
         </MenuNavButtons>
       </MenuNavContainer>
     </MenuBar>
