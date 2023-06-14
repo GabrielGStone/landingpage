@@ -10,7 +10,7 @@ const Home = () => {
       <Layout>
         <Header />
         <NavBar />
-        <Banner />
+        <Banner /> {/* fazer responsivo */}
         <Footer />
       </Layout>
     </>
