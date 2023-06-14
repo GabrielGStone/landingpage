@@ -6,7 +6,7 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   border-bottom: 3px solid #71d8ff;
-  width: 70vw;
+  width: 100vw;
   margin-left: -15vw;
   padding: 0 15vw;
   height: 62px;
@@ -39,9 +39,8 @@ export const StyledComponent = styled.div`
 `;
 
 export const SiteLogo = styled.div`
-  font-size: 20px;
-  font-weight: 600;
   display: flex;
+  height: 20px;
 `;
 
 export const NavContainer = styled.div`
@@ -58,6 +57,7 @@ interface navProps {
 export const NavButtons = styled.div<navProps>`
   cursor: pointer;
   font-size: 16px;
+  margin-right: 14px;
   color: ${({ isActive }) => (isActive ? "#0D47A1" : "#000")};
   @media (max-width: 1000px) {
     font-size: 32px;

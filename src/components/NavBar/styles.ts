@@ -4,38 +4,30 @@ export const Container = styled.div`
   display: flex;
   width: 100vw;
   margin-left: -15vw;
-  flex-direction: column;
-  justify-content: center;
+  padding: 0 15vw;
+  justify-content: space-between;
   align-items: center;
-  height: 250px;
-  color: #fff;
-  background-color: #283137;
-  margin-top: 40px;
-  font-size: 24px;
-  font-weight: 600;
+  height: 72px;
+  background-color: #033244;
   @media (max-width: 1000px) {
   }
 `;
 
-export const Number = styled.span`
-  font-size: 20px;
-  font-weight: 300;
-`;
-export const Wrap = styled.div`
+export const NavButtons = styled.div`
+  cursor: pointer;
+  margin-right: 32px;
   display: flex;
-  width: 200px;
-  justify-content: space-between;
+  color: #fff;
+  &:hover {
+    filter: invert(0) sepia(1) saturate(1000%) hue-rotate(145deg);
+    /* color: #00aeef; */
+  }
 `;
 
-export const ContactIcon = styled.img`
-  width: 50px;
-  border-radius: 50%;
-  /* -webkit-filter: invert(100%); /* Safari/Chrome */
-  /* filter: invert(100%); */
-`;
-
-export const SiteLogo = styled.div`
-  font-size: 20px;
-  font-weight: 600;
+export const Arrow = styled.img`
   display: flex;
+  width: 20px;
+  height: 18px;
+  margin-left: 8px;
+  filter: brightness(0) invert(1);
 `;

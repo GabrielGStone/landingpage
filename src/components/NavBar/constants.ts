@@ -1,5 +1,13 @@
-import logo2 from "../../assets/logo2.png";
+import arrow from "../../assets/arrow_down.svg";
 
 export const images = {
-  logo2,
+  arrow,
+};
+
+export const text = {
+  sites: "SITES",
+  redes: "REDES SOCIAIS",
+  commerce: "E-COMMERCE",
+  midia: "MÍDIA ONLINE",
+  landing: "LANDING PAGES",
 };
