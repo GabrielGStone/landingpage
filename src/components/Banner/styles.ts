@@ -2,15 +2,19 @@ import styled from "styled-components";
 import { images } from "./constants";
 
 export const Container = styled.div`
-  justify-content: center;
-  align-items: center;
-  height: 7800px;
-  width: 100vw;
-  margin: 0 -15vw;
-  background-image: url(${images.banner});
-  background-repeat: no-repeat;
-  background-position: top;
-
+  display: flex;
+  border-bottom: 5px solid #71d8ff;
   @media (max-width: 1000px) {
+    background-image: url(${images.responsive_banner});
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 65vh;
+  }
+`;
+export const BannerImage = styled.img`
+  width: 100vw;
+  @media (max-width: 1000px) {
+    width: 0;
   }
 `;

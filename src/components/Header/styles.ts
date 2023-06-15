@@ -7,7 +7,6 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   border-bottom: 3px solid #71d8ff;
   width: 100vw;
-  margin-left: -15vw;
   padding: 0 15vw;
   height: 62px;
   background-color: #fff;
@@ -58,7 +57,11 @@ export const NavButtons = styled.div<navProps>`
   cursor: pointer;
   font-size: 16px;
   margin-right: 14px;
-  color: ${({ isActive }) => (isActive ? "#0D47A1" : "#000")};
+  color: ${({ isActive }) => (isActive ? "#00AEEF" : "#000")};
+  &:hover {
+    color: #00aeef;
+    /* color: #00aeef; */
+  }
   @media (max-width: 1000px) {
     font-size: 32px;
   }
