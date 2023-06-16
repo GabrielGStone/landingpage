@@ -29,7 +29,7 @@ const ThirdContent = () => {
             {text.lorem2}
           </Text3>
         </TextContainer>
-        <Button>{text.buttonText1}</Button>
+        <Button white>{text.buttonText1}</Button>
       </Wrap>
     </Layout>
   );

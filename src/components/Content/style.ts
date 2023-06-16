@@ -6,13 +6,17 @@ interface WrapProps {
   padding?: string;
   center?: boolean;
   mb?: string;
+  justify?: string;
+  width?: string;
 }
 
 export const Wrap = styled.div<WrapProps>`
-  width: 100%;
+  width: ${({ width }) => (width ? width : "100%")};
   display: flex;
   align-items: ${({ center }) => (center ? "center" : "")};
   flex-direction: ${({ column }) => (column ? "column" : "")};
+  justify-content: ${({ justify }) => (justify ? justify : "")};
+
   margin-bottom: 70px;
   background-image: url(${({ background }) => (background ? background : "")});
   background-size: cover;
@@ -48,7 +52,7 @@ export const Text = styled.h3<TextProps>`
   font-size: ${({ size }) => (size ? size : "")};
   font-weight: ${({ weight }) => (weight ? weight : "")};
   color: ${({ color }) => (color ? color : "#033244")};
-  margin-bottom: ${({ mb }) => (mb ? mb : "#033244")};
+  margin-bottom: ${({ mb }) => (mb ? mb : "")};
 `;
 
 export const Text2 = styled.h3<TextProps>`

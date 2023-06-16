@@ -4,9 +4,19 @@ import { FC } from "react";
 interface ButtonProps {
   children: any;
   mb?: string;
+  mt?: string;
+  padding?: string;
+  white?: boolean;
 }
-const Button: FC<ButtonProps> = ({ children, mb }) => {
-  return <CustomButton style={{ marginBottom: mb }}>{children}</CustomButton>;
+const Button: FC<ButtonProps> = ({ children, mb, mt, padding, white }) => {
+  return (
+    <CustomButton
+      white={white}
+      style={{ marginBottom: mb, marginTop: mt, padding: padding }}
+    >
+      {children}
+    </CustomButton>
+  );
 };
 
 export default Button;

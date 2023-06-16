@@ -30,7 +30,7 @@ const SecContent = () => {
       >
         <TextContainer width="400px">
           <Text>{text.text5}</Text>
-          <Text3>{text.text6}</Text3>
+          <Text3 color="#005271">{text.text6}</Text3>
         </TextContainer>
         <Button mb="80">{text.buttonText3}</Button>
       </Wrap>
