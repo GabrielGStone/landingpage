@@ -2,25 +2,54 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 100vw;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
+  justify-content: flex-start;
+  align-items: space-between;
+  padding: 40px 15vw;
   color: #fff;
   background-color: #283137;
   font-size: 24px;
   font-weight: 600;
+  border-top: 5px solid #0089bc;
   @media (max-width: 1000px) {
   }
 `;
 
 export const SiteLogo = styled.div`
-  font-size: 20px;
-  font-weight: 600;
+  width: 88px;
   display: flex;
 `;
 
 export const Logos = styled.i`
   color: #8bd4f8;
+`;
+
+export const Title = styled.h4`
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+`;
+
+interface LinkProps {
+  text5?: boolean;
+}
+
+export const Link = styled.p<LinkProps>`
+  cursor: ${({ text5 }) => (text5 ? "auto" : "pointer")};
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: ${({ text5 }) => (text5 ? "#B2EAFF" : "#00aeef")};
+  max-width: ${({ text5 }) => (text5 ? "160px" : "")};
+`;
+interface BoxProps {
+  row?: boolean;
+}
+
+export const Box = styled.div<BoxProps>`
+  display: flex;
+  flex-direction: ${({ row }) => (row ? "row" : "column")};
+  margin-left: ${({ row }) => (row ? "" : "60px")};
+  align-items: flex-start;
+  width: ${({ row }) => (row ? "100%" : "")};
 `;
