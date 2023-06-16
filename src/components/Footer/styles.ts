@@ -20,3 +20,7 @@ export const SiteLogo = styled.div`
   font-weight: 600;
   display: flex;
 `;
+
+export const Logos = styled.i`
+  color: #8bd4f8;
+`;

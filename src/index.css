@@ -3,5 +3,22 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: sans-serif, "roboto";
+  font-family: "roboto";
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #0089bc;
+  }
+}
+
+button {
+  cursor: pointer;
 }

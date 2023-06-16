@@ -1,7 +1,8 @@
 import Banner from "../../components/Banner/Banner";
+import FirstContent from "../../components/Content/FirstContent/FirstContent";
+import SecContent from "../../components/Content/SecContent/SecContent";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-// import Layout from "../../components/Layout/Layout";
 import NavBar from "../../components/NavBar/NavBar";
 
 const Home = () => {
@@ -10,6 +11,8 @@ const Home = () => {
       <Header />
       <NavBar />
       <Banner />
+      <FirstContent />
+      <SecContent />
       <Footer />
     </>
   );
