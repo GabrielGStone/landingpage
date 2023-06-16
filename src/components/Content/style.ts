@@ -34,10 +34,13 @@ font-weight:600;
 font-size : 23px;
 letter-spacing: 0px;`;
 
-export const TextContainer = styled.div`
+interface ContainerProps {
+  width?: string;
+}
+export const TextContainer = styled.div<ContainerProps>`
   display: flex;
   flex-wrap: wrap;
-  width: 180px;
+  width: ${({ width }) => (width ? width : "180px")};
 `;
 export const Text = styled.h3<TextProps>`
   ${commom};

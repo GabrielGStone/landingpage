@@ -15,7 +15,7 @@ const SecContent = () => {
         </TextContainer>
       </Wrap>
       <Wrap column center>
-        <TextContainer style={{ width: 340 }}>
+        <TextContainer width="340px">
           <Text>{text.text3}</Text>
           <Text2>{text.text4}</Text2>
         </TextContainer>
@@ -28,7 +28,7 @@ const SecContent = () => {
         column
         mb="80px"
       >
-        <TextContainer style={{ width: 400 }}>
+        <TextContainer width="400px">
           <Text>{text.text5}</Text>
           <Text3>{text.text6}</Text3>
         </TextContainer>
