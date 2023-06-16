@@ -1,36 +1,5 @@
 import { styled } from "styled-components";
 
-interface WrapProps {
-  column?: boolean;
-}
-
-export const Wrap = styled.div<WrapProps>`
-  display: flex;
-  align-items: center;
-  flex-direction: ${({ column }) => (column ? "column" : "")};
-  margin-bottom: 70px;
-`;
-
-const commom = `
-fontsize = 38px;
-letter-spacing: 0px;`;
-
-export const TextContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 180px;
-`;
-export const Text = styled.h3`
-  ${commom};
-  padding-right: 6px;
-  color: #033244;
-`;
-
-export const Text2 = styled.h3`
-  ${commom};
-  color: #00aeef;
-`;
-
 export const LateralScroll = styled.div`
   display: flex;
   overflow-x: scroll;

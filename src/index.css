@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "roboto";
+  font-family: "roboto-slab";
 
   ::-webkit-scrollbar {
     width: 10px;
