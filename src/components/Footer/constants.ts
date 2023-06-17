@@ -1,8 +1,15 @@
 import logo2 from "../../assets/logo2.png";
+import fb from "../../assets/fb.svg";
+import linked from "../../assets/linked.svg";
+import twitter from "../../assets/twitter.svg";
+import youtube from "../../assets/youtube.svg";
+import insta from "../../assets/insta.svg";
 
 export const images = {
   logo2,
 };
+
+export const networks = [fb, insta, linked, twitter, youtube];
 
 export const text = [
   {

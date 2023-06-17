@@ -16,7 +16,11 @@ export const NavButtons = styled.div`
   cursor: pointer;
   margin-right: 32px;
   display: flex;
-  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  font-family: "archerPro";
+  text-transform: uppercase;
   &:hover {
     filter: invert(0) sepia(1) saturate(1000%) hue-rotate(145deg);
     /* color: #00aeef; */

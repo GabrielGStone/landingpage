@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: space-between;
-  padding: 40px 15vw;
+  padding: 40px 15vw 0;
   color: #fff;
   background-color: #283137;
   font-size: 24px;
@@ -44,6 +44,7 @@ export const Link = styled.p<LinkProps>`
 `;
 interface BoxProps {
   row?: boolean;
+  width?: string;
 }
 
 export const Box = styled.div<BoxProps>`
@@ -51,5 +52,10 @@ export const Box = styled.div<BoxProps>`
   flex-direction: ${({ row }) => (row ? "row" : "column")};
   margin-left: ${({ row }) => (row ? "" : "60px")};
   align-items: flex-start;
-  width: ${({ row }) => (row ? "100%" : "")};
+  width: ${({ width }) => (width ? "100%" : "")};
+`;
+
+export const Icon = styled.img`
+  margin: 15px 30px 0 0;
+  width: 30px;
 `;

@@ -41,6 +41,6 @@ export const Cards = styled.div`
   margin-top: 40px;
   width: 100%;
   display: flex;
-  gap: 8px;
+  gap: 24px;
   justify-content: space-between;
 `;

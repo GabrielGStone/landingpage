@@ -45,6 +45,7 @@ export const SiteLogo = styled.div`
 export const NavContainer = styled.div`
   display: flex;
   margin-left: 59px;
+
   @media (max-width: 1000px) {
   }
 `;
@@ -56,6 +57,8 @@ interface navProps {
 export const NavButtons = styled.div<navProps>`
   cursor: pointer;
   font-size: 16px;
+  font-family: "archerPro";
+  font-weight: 300;
   margin-right: 14px;
   color: ${({ isActive }) => (isActive ? "#00AEEF" : "#000")};
   &:hover {
@@ -63,7 +66,6 @@ export const NavButtons = styled.div<navProps>`
     /* color: #00aeef; */
   }
   @media (max-width: 1000px) {
-    font-size: 32px;
   }
 `;
 export const MenuNavButtons = styled.div<navProps>`
