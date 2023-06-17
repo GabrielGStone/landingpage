@@ -1,4 +1,3 @@
-import Banner from "../../components/Banner/Banner";
 import FirstContent from "../../components/Content/FirstContent/FirstContent";
 import FourthContent from "../../components/Content/FourthContent/FourthContent";
 import SecContent from "../../components/Content/SecContent/SecContent";
@@ -12,7 +11,6 @@ const Home = () => {
     <>
       <Header />
       <NavBar />
-      <Banner />
       <FirstContent />
       <SecContent />
       <ThirdContent />
