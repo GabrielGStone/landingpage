@@ -1,15 +1,19 @@
-import { Arrow, Container, NavButtons, Wrap, BannerImage } from "./styles";
+import { Arrow, Container, NavButtons, Banner, BannerImage } from "./styles";
 import { images, text } from "./constants";
 import CustomInput from "../Input/Input";
+import Sites from "../Sites/Sites";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   return (
     <>
       <Container>
         <div style={{ display: "flex" }}>
-          <NavButtons>
+          <NavButtons onClick={() => setMenuIsOpen(!menuIsOpen)}>
             {text.sites}
-            <Arrow src={images.arrow} alt="v" />
+            <Arrow src={images.arrow} alt="v" menuIsOpen={menuIsOpen} />
           </NavButtons>
           <NavButtons> {text.redes}</NavButtons>
           <NavButtons>{text.commerce}</NavButtons>
@@ -19,10 +23,10 @@ const NavBar = () => {
 
         <CustomInput></CustomInput>
       </Container>
-
-      <Wrap>
+      <Banner>
+        {menuIsOpen && <Sites />}
         <BannerImage src={images.banner} alt="" />
-      </Wrap>
+      </Banner>
     </>
   );
 };

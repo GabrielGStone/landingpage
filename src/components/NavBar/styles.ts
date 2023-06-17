@@ -28,16 +28,23 @@ export const NavButtons = styled.div`
   }
 `;
 
-export const Arrow = styled.img`
+interface ArrowProps {
+  menuIsOpen?: boolean;
+}
+
+export const Arrow = styled.img<ArrowProps>`
   display: flex;
-  width: 20px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   margin-left: 8px;
   filter: brightness(0) invert(1);
+  transform: ${({ menuIsOpen }) => (menuIsOpen ? "rotate(180deg)" : "")};
+  transition: transform 0.2s;
 `;
 
-export const Wrap = styled.div`
+export const Banner = styled.div`
   display: flex;
+  position: relative;
   border-bottom: 5px solid #71d8ff;
   @media (max-width: 1000px) {
     background-image: url(${images.responsive_banner});
