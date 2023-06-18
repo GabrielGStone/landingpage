@@ -1,10 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface ContainerProps {
   justify: boolean;
+  menuOpen?: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
+  font-family: "ArcherPro";
   border-bottom: 3px solid #71d8ff;
   width: 100vw;
   padding: 0 15vw;
@@ -19,6 +21,7 @@ export const Container = styled.div<ContainerProps>`
   transition: padding 0.2s ease-out;
 
   @media (max-width: 1000px) {
+    height: ${({ menuOpen }) => (menuOpen ? "100vh" : "")};
   }
 `;
 
@@ -39,7 +42,6 @@ export const StyledComponent = styled.div`
 
 export const SiteLogo = styled.div`
   display: flex;
-  height: 20px;
 `;
 
 export const NavContainer = styled.div`
@@ -51,16 +53,16 @@ export const NavContainer = styled.div`
 `;
 
 interface navProps {
-  isActive: boolean;
+  isActive?: boolean;
+  menuOpen?: boolean;
 }
 
 export const NavButtons = styled.div<navProps>`
   cursor: pointer;
-  font-size: 16px;
-  font-family: "archerPro";
+  font-size: 15px;
   font-weight: 300;
   margin-right: 14px;
-  color: ${({ isActive }) => (isActive ? "#00AEEF" : "#000")};
+  color: ${({ isActive }) => (isActive ? "#71D8FF" : "#000")};
   &:hover {
     color: #00aeef;
     /* color: #00aeef; */
@@ -69,44 +71,59 @@ export const NavButtons = styled.div<navProps>`
   }
 `;
 export const MenuNavButtons = styled.div<navProps>`
+  display: flex;
   cursor: pointer;
-  padding: 15px 20px;
-  font-size: 32px;
-  color: ${({ isActive }) => (isActive ? "#0D47A1" : "#fff")};
+  margin-bottom: 15px;
+  font-size: 14px;
   @media (max-width: 1000px) {
   }
 `;
 
-export const MenuBar = styled.div`
+interface menuProps {
+  menuOpen?: boolean;
+}
+export const MenuBar = styled.div<menuProps>`
+  border-top: 3px solid #0089bc;
   display: flex;
-  font-size: 32px;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  justify-self: flex-end;
+  width: 100vw;
+  background-color: #283137;
   position: absolute;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(0%);
+  transition: 0.2s;
 
-  &.closed {
-    transform: translateX(100%);
-  }
+  ${({ menuOpen }) =>
+    menuOpen
+      ? css`
+          width: 100vw;
+          height: 99.7vh;
+          top: 0;
+          left: 0;
+          padding: 10px 37px;
+        `
+      : css`
+          right: 1;
+          width: 0;
+          height: 0;
+          padding: 0;
+        `};
 `;
 
 export const MenuNavContainer = styled.div`
   display: flex;
-  align-items: flex-end;
-  height: 100vh;
-  width: 100vw;
+  width: 82%;
   flex-direction: column;
   background-color: #283137;
   position: absolute;
+  overflow-y: hidden;
+  padding-bottom: 25px;
   color: #fff;
+  border-bottom: 2px solid #e1e1e1;
 `;
 
 export const CloseMenu = styled.div`
   cursor: pointer;
+  right: 0;
+  position: absolute;
   display: flex;
   width: 50px;
   justify-content: center;
@@ -120,4 +137,50 @@ export const HeaderIcon = styled.img`
   width: 24px;
   margin-left: 16px;
   cursor: pointer;
+`;
+interface ArrowProps {
+  menuIsOpen?: boolean;
+}
+export const Arrow = styled.img<ArrowProps>`
+  display: flex;
+  width: 15px;
+  height: 15px;
+  margin-left: 8px;
+  filter: invert(1) sepia(100%) brightness(80%) saturate(400%)
+    hue-rotate(150deg);
+  transform: ${({ menuIsOpen }) => (menuIsOpen ? "rotate(180deg)" : "")};
+  transition: transform 0.2s;
+`;
+interface BoxProps {
+  siteIsOpen?: boolean;
+}
+export const Box = styled.div<BoxProps>`
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  background-color: #000;
+  border-radius: 10px;
+  font-family: "Sora";
+  font-size: 12px;
+  font-weight: 800;
+  ${({ siteIsOpen }) =>
+    siteIsOpen
+      ? css`
+          padding: 32px 28px 5px;
+          margin-bottom: 24px;
+        `
+      : css`
+          width: 0;
+          height: 0;
+          padding: 0;
+        `};
+`;
+
+export const SiteText = styled.p`
+  cursor: pointer;
+  color: #f8fcfe;
+  margin-bottom: 27px;
+  ::hover {
+    color: red;
+  }
 `;

@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   return (
-    <Container justify={screenWidth > 1000}>
+    <Container justify={screenWidth > 1000} menuOpen={menuOpen}>
       <SiteLogo>
         <img src={images.logo} alt="logo" />
       </SiteLogo>
@@ -66,19 +66,17 @@ const Header = () => {
         </NavContainer>
       ) : (
         <>
-          {!menuOpen ? (
-            <div>
-              <HeaderIcon src={images.account} alt="account" />
-              <HeaderIcon src={images.cart} alt="cart" />
-              <HeaderIcon
-                src={images.menu}
-                alt="="
-                onClick={() => setMenuOpen(!menuOpen)}
-              />
-            </div>
-          ) : (
-            <Menu setMenuOpen={setMenuOpen} />
-          )}
+          <div>
+            <HeaderIcon src={images.account} alt="account" />
+            <HeaderIcon src={images.cart} alt="cart" />
+            <HeaderIcon
+              src={images.menu}
+              alt="="
+              onClick={() => setMenuOpen(!menuOpen)}
+            />
+          </div>
+
+          <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
         </>
       )}
     </Container>

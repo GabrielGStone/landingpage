@@ -59,6 +59,10 @@ export const Box = styled.div<BoxProps>`
 `;
 
 export const Icon = styled.img`
+  cursor: pointer;
   margin: 15px 30px 0 0;
   width: 30px;
+  &:hover {
+    filter: contrast(300%);
+  }
 `;

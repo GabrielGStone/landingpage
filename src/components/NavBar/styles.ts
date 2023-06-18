@@ -24,7 +24,7 @@ export const NavButtons = styled.div`
   font-family: "archerPro";
   text-transform: uppercase;
   &:hover {
-    filter: invert(0) sepia(1) saturate(1000%) hue-rotate(145deg);
+    filter: sepia(2) brightness(100%) saturate(1000%) hue-rotate(145deg);
     /* color: #00aeef; */
   }
 `;
