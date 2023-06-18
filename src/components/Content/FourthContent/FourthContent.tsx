@@ -12,7 +12,7 @@ const FourthContent = () => {
         <DualArcView right />
       </Wrap>
       <Wrap justify="space-around" center padding="45px 0 0 0">
-        <Wrap column padding="0 112px 0 5vw" width="40vw">
+        <Wrap column padding="0 112px 0 5vw">
           <Text>{text.text1}</Text>
           <Text3 size="20px" color="#0089BC">
             {text.text2}

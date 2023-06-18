@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, Link, Section, Title } from "./style";
+import { Box, Link, Section, Title, BlankSpace } from "./style";
 import { Text5 } from "../style";
 
 interface CardProps {
@@ -16,6 +16,7 @@ const Card: FC<CardProps> = ({ title, text, image }) => {
         <Text5>{text}</Text5>
         <Link>CONHECER</Link>
       </Section>
+      <BlankSpace />
     </Box>
   );
 };

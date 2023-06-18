@@ -15,5 +15,6 @@ export const Content = styled.div`
   justify-content: flex-start;
   @media (max-width: 1000px) {
     /* width: 100%; */
+    padding: 0 37px;
   }
 `;

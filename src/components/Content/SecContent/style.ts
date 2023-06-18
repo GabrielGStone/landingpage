@@ -11,6 +11,9 @@ export const LateralScroll = styled.div`
   margin-top: 40px;
   background-color: #f3f3f3;
   border-bottom: none;
+  @media (max-width: 1000px) {
+    background-color: #fff;
+  }
 `;
 
 export const Products = styled.div`

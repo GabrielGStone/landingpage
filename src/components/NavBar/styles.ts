@@ -10,6 +10,7 @@ export const Container = styled.div`
   height: 72px;
   background-color: #033244;
   @media (max-width: 1000px) {
+    height: 0;
   }
 `;
 
@@ -47,11 +48,13 @@ export const Banner = styled.div`
   position: relative;
   border-bottom: 5px solid #71d8ff;
   @media (max-width: 1000px) {
+    border-bottom: none;
+
     background-image: url(${images.responsive_banner});
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 65vh;
+    min-height: 80vh;
   }
 `;
 export const BannerImage = styled.img`

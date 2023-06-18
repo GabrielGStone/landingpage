@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-
+import bg_phone from "../../assets/bg_phone.png";
 interface WrapProps {
   column?: boolean;
   background?: string;
@@ -8,6 +8,7 @@ interface WrapProps {
   mb?: string;
   justify?: string;
   width?: string;
+  bg?: boolean;
 }
 
 export const Wrap = styled.div<WrapProps>`
@@ -16,14 +17,21 @@ export const Wrap = styled.div<WrapProps>`
   align-items: ${({ center }) => (center ? "center" : "")};
   flex-direction: ${({ column }) => (column ? "column" : "")};
   justify-content: ${({ justify }) => (justify ? justify : "")};
-
-  margin-bottom: 70px;
   background-image: url(${({ background }) => (background ? background : "")});
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
   padding: ${({ padding }) => (padding ? padding : "")};
-  margin-bottom: ${({ mb }) => (mb ? mb : "")};
+  margin-bottom: ${({ mb }) => (mb ? mb : "40px")};
+  @media (max-width: 1000px) {
+    background-position-x: 100%;
+    background-position-y: 100%;
+    background-image: url(${({ background }) => (background ? bg_phone : "")});
+
+    padding: 32px;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 interface TextProps {
@@ -45,6 +53,11 @@ export const TextContainer = styled.div<ContainerProps>`
   display: flex;
   flex-wrap: wrap;
   width: ${({ width }) => (width ? width : "180px")};
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 `;
 export const Text = styled.h3<TextProps>`
   ${commom};
@@ -53,6 +66,10 @@ export const Text = styled.h3<TextProps>`
   font-weight: ${({ weight }) => (weight ? weight : "")};
   color: ${({ color }) => (color ? color : "#033244")};
   margin-bottom: ${({ mb }) => (mb ? mb : "")};
+  @media (max-width: 1000px) {
+    font-size: 17px;
+    text-align: center;
+  }
 `;
 
 export const Text2 = styled.h3<TextProps>`
@@ -60,6 +77,9 @@ export const Text2 = styled.h3<TextProps>`
   font-size: ${({ size }) => (size ? size : "")};
   font-weight: ${({ weight }) => (weight ? weight : "")};
   color: ${({ color }) => (color ? color : "#00AEEF")};
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 export const Text3 = styled.p<TextProps>`
@@ -68,17 +88,27 @@ export const Text3 = styled.p<TextProps>`
   font-size: ${({ size }) => (size ? size : "18px")};
   font-weight: ${({ weight }) => (weight ? weight : "")};
   color: ${({ color }) => (color ? color : "#033244")};
+  @media (max-width: 1000px) {
+    text-align: center;
+    font-size: 12px;
+  }
 `;
 
 export const Text4 = styled.h4<TextProps>`
   font-size: ${({ size }) => (size ? size : "20px")};
   font-weight: ${({ weight }) => (weight ? weight : "")};
-  color: ${({ color }) => (color ? color : "#0089bc")};
+  color: ${({ color }) => (color ? color : "#0089BC")};
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 export const Text5 = styled.p<TextProps>`
   color: #e2f7ff;
   margin-bottom: 40px;
+  @media (max-width: 1000px) {
+    width: 70%;
+  }
 `;
 
 export const LateralScroll = styled.div`

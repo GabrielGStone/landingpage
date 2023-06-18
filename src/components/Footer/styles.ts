@@ -53,6 +53,9 @@ export const Box = styled.div<BoxProps>`
   margin-left: ${({ row }) => (row ? "" : "60px")};
   align-items: flex-start;
   width: ${({ width }) => (width ? "100%" : "")};
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export const Icon = styled.img`

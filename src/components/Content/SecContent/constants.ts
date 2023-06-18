@@ -2,12 +2,14 @@ import laptop from "../../../assets/laptop.png";
 import shop from "../../../assets/shop.png";
 import phone from "../../../assets/phone.png";
 import bgbackground from "../../../assets/bg.png";
+import bg_phone from "../../../assets/bg_phone.png";
 
 export const images = {
   laptop,
   shop,
   phone,
   bgbackground,
+  bg_phone,
 };
 
 export const text = {
