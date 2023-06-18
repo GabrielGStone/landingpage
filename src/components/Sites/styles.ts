@@ -1,14 +1,31 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+  menuIsOpen?: boolean;
+}
+export const Container = styled.div<ContainerProps>`
   display: flex;
-  justify-content: space-between;
-  border-top: 4px solid #00aeef;
-  margin-left: 15vw;
-  padding: 32px 160px;
-  width: 70vw;
   position: absolute;
-  background-color: #fff;
+  transition: linear 0.2s;
+
+  ${({ menuIsOpen }) =>
+    menuIsOpen
+      ? css`
+          padding: 32px 223px 55px 161px;
+          background-color: #fff;
+          overflow: hidden;
+          justify-content: space-between;
+          border-top: 4px solid #00aeef;
+          margin-left: 15vw;
+          width: 70vw;
+        `
+      : css`
+          border: none;
+          max-height: 0;
+          opacity: 0;
+          padding: 0;
+          margin: 0;
+        `};
   @media (max-width: 1000px) {
   }
 `;

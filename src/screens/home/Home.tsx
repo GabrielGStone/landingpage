@@ -4,6 +4,7 @@ import SecContent from "../../components/Content/SecContent/SecContent";
 import ThirdContent from "../../components/Content/ThirdContent/ThirdContent";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import Layout from "../../components/Layout/Layout";
 import NavBar from "../../components/NavBar/NavBar";
 
 const Home = () => {
@@ -11,10 +12,12 @@ const Home = () => {
     <>
       <Header />
       <NavBar />
-      <FirstContent />
-      <SecContent />
-      <ThirdContent />
-      <FourthContent />
+      <Layout>
+        <FirstContent />
+        <SecContent />
+        <ThirdContent />
+        <FourthContent />
+      </Layout>
       <Footer />
     </>
   );

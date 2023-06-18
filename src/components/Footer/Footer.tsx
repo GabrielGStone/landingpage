@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Text3, Wrap } from "../Content/style";
 import { images, networks, text, text2 } from "./constants";
 import { Box, Container, Icon, Link, SiteLogo, Title } from "./styles";

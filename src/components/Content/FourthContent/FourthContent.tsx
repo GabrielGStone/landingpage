@@ -1,13 +1,12 @@
 import Button from "../../Button/Button";
-import Layout from "../../Layout/Layout";
-import { Text, Text3, TextContainer, Wrap } from "../style";
+import { Text, Text3, Wrap } from "../style";
 import DualArcView from "./DualArcView";
 import { text } from "./constants";
 import { Input } from "./style";
 
 const FourthContent = () => {
   return (
-    <Layout>
+    <>
       <Wrap>
         <DualArcView />
         <DualArcView right />
@@ -27,7 +26,7 @@ const FourthContent = () => {
           </Button>
         </Wrap>
       </Wrap>
-    </Layout>
+    </>
   );
 };
 

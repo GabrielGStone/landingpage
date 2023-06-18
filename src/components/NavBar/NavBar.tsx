@@ -24,8 +24,12 @@ const NavBar = () => {
         <CustomInput></CustomInput>
       </Container>
       <Banner>
-        {menuIsOpen && <Sites />}
-        <BannerImage src={images.banner} alt="" />
+        <Sites isOpen={menuIsOpen} />
+        <BannerImage
+          src={images.banner}
+          alt=""
+          onClick={() => setMenuIsOpen(false)}
+        />
       </Banner>
     </>
   );

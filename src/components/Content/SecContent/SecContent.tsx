@@ -1,19 +1,12 @@
 import Button from "../../Button/Button";
-import Layout from "../../Layout/Layout";
 import HorizontalScroll from "./HorizontalScroll";
 import { images, text } from "./constants";
 import { Text, Text2, Text3, TextContainer, Wrap } from "../style";
 
 const SecContent = () => {
   return (
-    <Layout>
-      <Wrap>
-        <TextContainer>
-          <Text>{text.text1}</Text>
-          <Text2>{text.text2}</Text2>
-          <Button mb="80px">{text.buttonText1}</Button>
-        </TextContainer>
-      </Wrap>
+    <>
+      <Wrap></Wrap>
       <Wrap column center>
         <TextContainer width="340px">
           <Text>{text.text3}</Text>
@@ -34,7 +27,7 @@ const SecContent = () => {
         </TextContainer>
         <Button mb="80">{text.buttonText3}</Button>
       </Wrap>
-    </Layout>
+    </>
   );
 };
 

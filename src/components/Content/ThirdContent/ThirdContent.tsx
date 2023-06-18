@@ -1,5 +1,4 @@
 import Button from "../../Button/Button";
-import Layout from "../../Layout/Layout";
 import { Text, Text3, Text4, TextContainer, Wrap } from "../style";
 import Card from "./Card";
 import { images, text } from "./constants";
@@ -12,7 +11,7 @@ const ThirdContent = () => {
     { title: text.text5, text: text.lorem, image: images.card3 },
   ];
   return (
-    <Layout>
+    <>
       <Wrap center column>
         <Text mb="10px">{text.text1}</Text>
         <Text4>{text.text2}</Text4>
@@ -31,7 +30,7 @@ const ThirdContent = () => {
         </TextContainer>
         <Button white>{text.buttonText1}</Button>
       </Wrap>
-    </Layout>
+    </>
   );
 };
 
