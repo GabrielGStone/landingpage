@@ -1,36 +1,80 @@
-import { Box, CustomSwiper } from "./style";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useSwiper } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper";
+import "swiper/swiper-bundle.min.css";
+import arrow from "../../../assets/arrow_right.svg";
+import {
+  NextButton,
+  PrevButton,
+  CarouselSlide,
+  CarouselContainer,
+  Arrow,
+  SlideImage,
+} from "./style";
+import { slides } from "./constants";
 
-import "swiper/swiper.min.css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-const Slider = () => {
-  const a = ["a", "b", "c", "d", "a", "b", "c", "d", "a", "b", "c", "d"];
-  const swiper = useSwiper();
+SwiperCore.use([Navigation]);
+
+const Carousel: React.FC = () => {
+  const swiperRef = useRef<any>(null);
+
+  useEffect(() => {
+    const swiper = swiperRef.current;
+    if (swiper) {
+      swiper.navigation.update();
+    }
+  }, []);
+
+  const goNextSlide = () => {
+    const swiper = swiperRef.current;
+    if (swiper) {
+      swiper.slideNext();
+    }
+  };
+
+  const goPrevSlide = () => {
+    const swiper = swiperRef.current;
+    if (swiper) {
+      swiper.slidePrev();
+    }
+  };
+
   return (
-    <Box>
-      {a.map((data) => (
-        <SwiperSlide>{data}</SwiperSlide>
-      ))}
-      <div
-        style={{
-          cursor: "pointer",
-          display: "flex",
-          backgroundColor: "#dadce0",
-          width: 24,
-          height: 24,
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: "50%",
+    <CarouselContainer>
+      <Swiper
+        spaceBetween={24}
+        slidesPerView={3}
+        centeredSlides={true}
+        loop={true}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         }}
-        onClick={() => swiper.slideNext()}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
       >
-        {">"}
-      </div>
-    </Box>
+        {slides.map((data, index) => {
+          console.log(data);
+          return (
+            <div key={index}>
+              <SwiperSlide>
+                <CarouselSlide>
+                  <SlideImage src={data} alt="images" />
+                </CarouselSlide>
+              </SwiperSlide>
+            </div>
+          );
+        })}
+      </Swiper>
+      <NextButton onClick={goNextSlide}>
+        <Arrow src={arrow} alt=">" />
+      </NextButton>
+      <PrevButton onClick={goPrevSlide}>
+        <Arrow src={arrow} alt="<" />
+      </PrevButton>
+    </CarouselContainer>
   );
 };
 
-export default Slider;
+export default Carousel;

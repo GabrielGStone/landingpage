@@ -2,6 +2,9 @@ import laptop from "../../../assets/laptop.png";
 import shop from "../../../assets/shop.png";
 import phone from "../../../assets/phone.png";
 import bgbackground from "../../../assets/bg.png";
+import route from "../../../assets/route.svg";
+import headset from "../../../assets/headset.svg";
+import inventory from "../../../assets/inventory.svg";
 
 export const images = {
   laptop,
@@ -22,3 +25,5 @@ export const text = {
   buttonText2: "VER TODOS PRODUTOS",
   buttonText3: "CADASTRE-SE",
 };
+
+export const slides = [route, headset, inventory, route, headset, inventory];
