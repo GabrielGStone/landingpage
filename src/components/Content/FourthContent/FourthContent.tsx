@@ -1,17 +1,20 @@
 import Button from "../../Button/Button";
 import { Text, Text3, Wrap } from "../style";
+import Arc from "./Arc";
+
 import DualArcView from "./DualArcView";
 import { text } from "./constants";
-import { Input } from "./style";
+import { Input, Wrap3 } from "./style";
 
 const FourthContent = () => {
   return (
     <>
+      <Arc />
       <Wrap>
         <DualArcView />
         <DualArcView right />
       </Wrap>
-      <Wrap justify="space-around" center padding="45px 0 0 0">
+      <Wrap3 justify="space-around" center padding="45px 0 0 0">
         <Wrap column padding="0 112px 0 5vw">
           <Text>{text.text1}</Text>
           <Text3 size="20px" color="#0089BC">
@@ -25,7 +28,7 @@ const FourthContent = () => {
             {text.buttonText}
           </Button>
         </Wrap>
-      </Wrap>
+      </Wrap3>
     </>
   );
 };

@@ -1,6 +1,15 @@
-import { Text3, Wrap } from "../Content/style";
+import { Text3 } from "../Content/style";
 import { images, networks, text, text2 } from "./constants";
-import { Box, Container, Icon, Link, SiteLogo, Title } from "./styles";
+import {
+  Box,
+  Container,
+  Icon,
+  Link,
+  SiteLogo,
+  Title,
+  Wrap,
+  IconBox,
+} from "./styles";
 
 const Footer = () => {
   return (
@@ -18,7 +27,11 @@ const Footer = () => {
                 <Link>{text2}</Link>
                 <Link>{text3}</Link>
                 {text4 && <Link>{text4}</Link>}
-                {text5 && <Link text5>{text5}</Link>}
+                {text5 && (
+                  <Link text5 style={{ marginTop: "-30px" }}>
+                    {text5}
+                  </Link>
+                )}
               </Box>
             );
           })}
@@ -31,13 +44,14 @@ const Footer = () => {
           justifyContent: "space-between",
         }}
         row
+        reverse
       >
-        <Box row style={{ width: "auto" }}>
+        <Box reverse row style={{ width: "auto" }}>
           <Text3 color="#E1E1E1" size="14px" style={{ marginTop: "0" }}>
             {text2.hosting}
           </Text3>
         </Box>
-        <Box style={{ width: "auto" }}>
+        <IconBox>
           <Text3 color="#71D8FF" size="20px" style={{ marginTop: "0" }}>
             {text2.networks}
           </Text3>
@@ -46,7 +60,7 @@ const Footer = () => {
               return <Icon src={data} />;
             })}
           </div>
-        </Box>
+        </IconBox>
       </Box>
     </Container>
   );

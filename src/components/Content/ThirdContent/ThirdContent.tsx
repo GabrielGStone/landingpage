@@ -3,6 +3,7 @@ import { Text, Text3, Text4, TextContainer, Wrap } from "../style";
 import Card from "./Card";
 import { images, text } from "./constants";
 import { Cards, Wrap2 } from "./style";
+import "../styles.css";
 
 const ThirdContent = () => {
   const cardImages = [
@@ -15,7 +16,7 @@ const ThirdContent = () => {
       <Wrap center column>
         <Text mb="10px">{text.text1}</Text>
         <Text4 size="12px">{text.text2}</Text4>
-        <Cards>
+        <Cards className="card">
           {cardImages.map(({ title, text, image }) => {
             return <Card title={title} text={text} image={image} />;
           })}

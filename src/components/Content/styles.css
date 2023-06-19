@@ -1,0 +1,11 @@
+.card:hover .card:not(:hover) {
+  opacity: 0.8;
+  scale: 0.9;
+}
+
+@media (max-width: 1000px) {
+  .card:hover .card:not(:hover) {
+    opacity: 1;
+    scale: 1;
+  }
+}

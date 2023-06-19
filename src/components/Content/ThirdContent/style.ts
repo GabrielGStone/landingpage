@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import bg2_phone from "../../assets/bg2_phone.png";
 
 interface BoxProps {
   background: string;

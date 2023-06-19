@@ -26,4 +26,35 @@ export const text = {
   buttonText3: "CADASTRE-SE",
 };
 
-export const slides = [route, headset, inventory, route, headset, inventory];
+export const slides = [
+  {
+    image: route,
+    title: "Título",
+    text: "Dolor sit amet, consetetur sadipscing elitr, sed",
+  },
+  {
+    image: headset,
+    title: "Serviço",
+    text: "Lorem ipsum dolor sit amet, consetetur sadipscing",
+  },
+  {
+    image: inventory,
+    title: "Exemplo",
+    text: "Ipsum dolor sit amet, consetetur sadipscing elitr.",
+  },
+  {
+    image: route,
+    title: "Título",
+    text: "Dolor sit amet, consetetur sadipscing elitr, sed",
+  },
+  {
+    image: headset,
+    title: "Serviço",
+    text: "Lorem ipsum dolor sit amet, consetetur sadipscing",
+  },
+  {
+    image: inventory,
+    title: "Exemplo",
+    text: "Ipsum dolor sit amet, consetetur sadipscing elitr.",
+  },
+];

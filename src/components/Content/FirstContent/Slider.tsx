@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 import "swiper/swiper-bundle.min.css";
@@ -10,12 +10,28 @@ import {
   CarouselContainer,
   Arrow,
   SlideImage,
+  Title,
+  Text,
+  Buttons,
 } from "./style";
 import { slides } from "./constants";
 
 SwiperCore.use([Navigation]);
 
 const Carousel: React.FC = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const swiperRef = useRef<any>(null);
 
   useEffect(() => {
@@ -41,9 +57,20 @@ const Carousel: React.FC = () => {
 
   return (
     <CarouselContainer>
+      {screenWidth > 1000 && (
+        <Buttons>
+          <PrevButton onClick={goPrevSlide}>
+            <Arrow src={arrow} alt="<" />
+          </PrevButton>
+          <NextButton onClick={goNextSlide}>
+            <Arrow src={arrow} alt=">" />
+          </NextButton>
+        </Buttons>
+      )}
+      {screenWidth < 1000 && <div></div>}
       <Swiper
         spaceBetween={24}
-        slidesPerView={3}
+        slidesPerView={screenWidth > 1000 ? 3 : 1}
         centeredSlides={true}
         loop={true}
         navigation={{
@@ -54,25 +81,24 @@ const Carousel: React.FC = () => {
           swiperRef.current = swiper;
         }}
       >
-        {slides.map((data, index) => {
-          console.log(data);
-          return (
-            <div key={index}>
-              <SwiperSlide>
-                <CarouselSlide>
-                  <SlideImage src={data} alt="images" />
-                </CarouselSlide>
-              </SwiperSlide>
-            </div>
-          );
-        })}
+        {slides.map(
+          (data: { image: string; title: string; text: string }, index) => {
+            console.log(data.image);
+            return (
+              <div key={index}>
+                <SwiperSlide>
+                  <CarouselSlide>
+                    <SlideImage src={data.image} alt={data.title} />
+                    <Title>{data.title}</Title>
+                    <Text>{data.text}</Text>
+                  </CarouselSlide>
+                </SwiperSlide>
+              </div>
+            );
+          }
+        )}
       </Swiper>
-      <NextButton onClick={goNextSlide}>
-        <Arrow src={arrow} alt=">" />
-      </NextButton>
-      <PrevButton onClick={goPrevSlide}>
-        <Arrow src={arrow} alt="<" />
-      </PrevButton>
+      {screenWidth > 1000 && <div></div>}
     </CarouselContainer>
   );
 };

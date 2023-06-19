@@ -27,7 +27,6 @@ export const Wrap = styled.div<WrapProps>`
     background-position-x: 100%;
     background-position-y: 100%;
     background-image: url(${({ background }) => (background ? bg_phone : "")});
-
     padding: 32px;
     align-items: center;
     flex-direction: column;
@@ -89,8 +88,8 @@ export const Text3 = styled.p<TextProps>`
   font-weight: ${({ weight }) => (weight ? weight : "")};
   color: ${({ color }) => (color ? color : "#033244")};
   @media (max-width: 1000px) {
-    text-align: center;
-    font-size: 12px;
+    text-align: start;
+    font-size: 17px;
   }
 `;
 

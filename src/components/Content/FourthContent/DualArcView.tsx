@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Arc, ArcView, Box, Caps, RightImages } from "./style";
+import { ArcView, Box, Caps, RightImages } from "./style";
 import { images, text } from "./constants";
 import { Text, Text3, TextContainer } from "../style";
 
@@ -11,7 +11,6 @@ const DualArcView: FC<arcProps> = ({ right }) => {
   const rigthImages = [images.selo, images.vegan, images.organico];
   return (
     <ArcView>
-      <Arc right={right} />
       <Box right={right}>
         {right ? (
           rigthImages.map((data) => {

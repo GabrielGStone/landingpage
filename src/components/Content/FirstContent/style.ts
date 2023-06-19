@@ -4,12 +4,19 @@ import Swiper from "swiper";
 export const Container = styled.div`
   display: flex;
   margin-top: 70px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export const Arc = styled.div`
   display: flex;
   flex-direction: column;
   margin: 48px 55px 0 40px;
+  @media (max-width: 1000px) {
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
 export const UpperArc = styled.div`
@@ -17,12 +24,29 @@ export const UpperArc = styled.div`
   height: 100px;
   border-left: 1.32px solid #00aeef;
   border-bottom-left-radius: 10px;
+  @media (max-width: 1000px) {
+    border: none;
+    border-radius: 0;
+    border-top: 1.32px solid #00aeef;
+    width: 100px;
+    height: 8px;
+
+    border-top-right-radius: 20px;
+  }
 `;
 export const BottomArc = styled.div`
   width: 8px;
   height: 100px;
   border-left: 1.32px solid #00aeef;
   border-top-left-radius: 10px;
+  @media (max-width: 1000px) {
+    border-radius: 0;
+    border: none;
+    border-top: 1.32px solid #00aeef;
+    border-top-left-radius: 20px;
+    height: 8px;
+    width: 100px;
+  }
 `;
 
 export const Box = styled.div`
@@ -53,6 +77,7 @@ const CustomButton = styled.button`
 export const NextButton = styled(CustomButton)``;
 
 export const PrevButton = styled(CustomButton)`
+  margin-right: 20px;
   transform: rotate(180deg);
 `;
 
@@ -62,14 +87,54 @@ export const Arrow = styled.img`
 
 export const CarouselSlide = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  padding: 17px 20px 41px;
   height: 100%;
-  border: 1px #ccc solid;
-  box-shadow: unset 2px 2px 2px 2px #ccc;
+  box-shadow: inset rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
-export const CarouselContainer = styled.div``;
+export const CarouselContainer = styled.div`
+  @media (max-width: 1000px) {
+    display: flex;
+    width: 80vw;
+  }
+`;
 
-export const SlideImage = styled.img``;
+export const SlideImage = styled.img`
+  width: 170px;
+`;
+
+export const Title = styled.p`
+  font-size: 16px;
+  color: #101912;
+  font-weight: 600;
+  margin: 16px 0 11px;
+`;
+
+export const Text = styled.p`
+  font-size: 15px;
+  color: #101912;
+  font-weight: 300;
+  text-align: center;
+  width: 200px;
+`;
+
+export const TextBox = styled.div``;
+
+export const Buttons = styled.div`
+  display: flex;
+  margin-bottom: 24px;
+`;
+
+export const Wrap = styled.div`
+  display: flex;
+  width: 45%;
+  flex-direction: flex;
+  @media (max-width: 1000px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+`;

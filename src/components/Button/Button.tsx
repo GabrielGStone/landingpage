@@ -7,12 +7,21 @@ interface ButtonProps {
   mt?: string;
   padding?: string;
   white?: boolean;
+  noMargin?: boolean;
 }
-const Button: FC<ButtonProps> = ({ children, mb, mt, padding, white }) => {
+const Button: FC<ButtonProps> = ({
+  children,
+  mb,
+  mt,
+  padding,
+  white,
+  noMargin,
+}) => {
   return (
     <CustomButton
       white={white}
       style={{ marginBottom: mb, marginTop: mt, padding: padding }}
+      noMargin={noMargin}
     >
       {children}
     </CustomButton>
