@@ -184,3 +184,14 @@ export const SiteText = styled.p`
     color: red;
   }
 `;
+
+export const Select = styled.select`
+  border: none;
+  outline: none;
+`;
+
+export const HeaderIcons = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+`;

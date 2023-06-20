@@ -4,8 +4,10 @@ import Menu from "./Menu";
 import {
   Container,
   HeaderIcon,
+  HeaderIcons,
   NavButtons,
   NavContainer,
+  Select,
   SiteLogo,
 } from "./styles";
 
@@ -38,32 +40,41 @@ const Header = () => {
         <img src={images.logo} alt="logo" />
       </SiteLogo>
       {screenWidth > 1000 ? (
-        <NavContainer>
-          <NavButtons
-            isActive={isActive === "Nerdweb"}
-            onClick={() => handleNavClick("Nerdweb")}
-          >
-            Nerdweb
-          </NavButtons>
-          <NavButtons
-            isActive={isActive === "Serviços"}
-            onClick={() => handleNavClick("Serviços")}
-          >
-            Serviços
-          </NavButtons>
-          <NavButtons
-            isActive={isActive === "Blog"}
-            onClick={() => handleNavClick("Blog")}
-          >
-            Blog
-          </NavButtons>
-          <NavButtons
-            isActive={isActive === "Atendimento"}
-            onClick={() => handleNavClick("Atendimento")}
-          >
-            Atendimento
-          </NavButtons>
-        </NavContainer>
+        <>
+          <NavContainer>
+            <NavButtons
+              isActive={isActive === "Nerdweb"}
+              onClick={() => handleNavClick("Nerdweb")}
+            >
+              Nerdweb
+            </NavButtons>
+            <NavButtons
+              isActive={isActive === "Serviços"}
+              onClick={() => handleNavClick("Serviços")}
+            >
+              Serviços
+            </NavButtons>
+            <NavButtons
+              isActive={isActive === "Blog"}
+              onClick={() => handleNavClick("Blog")}
+            >
+              Blog
+            </NavButtons>
+            <NavButtons
+              isActive={isActive === "Atendimento"}
+              onClick={() => handleNavClick("Atendimento")}
+            >
+              Atendimento
+            </NavButtons>
+          </NavContainer>
+          <HeaderIcons>
+            <Select>
+              <option value="daily">dia a dia</option>
+            </Select>
+            <HeaderIcon src={images.account} alt="account" />
+            <HeaderIcon src={images.cart} alt="cart" />
+          </HeaderIcons>
+        </>
       ) : (
         <>
           <div>
