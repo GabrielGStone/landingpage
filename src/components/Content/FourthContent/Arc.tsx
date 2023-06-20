@@ -1,10 +1,10 @@
-import { ArcContainer } from "./style";
+import { ArcContainer, RightArcContainer } from "./style";
 
 const Arc = () => {
   return (
     <div style={{ display: "flex" }}>
       <ArcContainer />
-      <ArcContainer right />
+      <RightArcContainer />
     </div>
   );
 };
