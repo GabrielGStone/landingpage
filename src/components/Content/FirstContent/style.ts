@@ -17,6 +17,7 @@ export const Arc = styled.div`
   @media (max-width: 1000px) {
     flex-direction: row;
     align-items: center;
+    width: 138px;
   }
 `;
 
@@ -28,9 +29,9 @@ export const UpperArc = styled.div`
   @media (max-width: 1000px) {
     border: none;
     border-radius: 0;
-    border-top: 1.32px solid #00aeef;
-    width: 100px;
-    height: 8px;
+    border-top: 2px solid #00aeef;
+    width: 50%;
+    height: 15px;
 
     border-top-right-radius: 20px;
   }
@@ -43,10 +44,10 @@ export const BottomArc = styled.div`
   @media (max-width: 1000px) {
     border-radius: 0;
     border: none;
-    border-top: 1.32px solid #00aeef;
+    border-top: 2px solid #00aeef;
     border-top-left-radius: 20px;
-    height: 8px;
-    width: 100px;
+    height: 15px;
+    flex: 1;
   }
 `;
 
