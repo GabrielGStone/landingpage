@@ -19,4 +19,4 @@ Este projeto é um protótipo de uma landing page desenvolvida utilizando React 
 
 ## Acesso
 
-Para acessar sem clonar, entre no link: 'https://nerdweb-landingpage.netlify.app/'
+Para acessar sem clonar, entre no link: `https://nerdweb-landingpage.netlify.app/`.
