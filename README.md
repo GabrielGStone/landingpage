@@ -17,3 +17,6 @@ Este projeto é um protótipo de uma landing page desenvolvida utilizando React 
 3. Execute o projeto com`yarn start`.
 4. Acesse o projeto em `http://localhost:3000/`.
 
+## Acesso
+
+Para acessar sem clonar, entre no link: 'https://nerdweb-landingpage.netlify.app/'
