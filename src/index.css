@@ -22,7 +22,7 @@
 
 button {
   cursor: pointer;
-  
 }
-button:hover{
+button:hover {
+  filter: contrast(150%);
 }
