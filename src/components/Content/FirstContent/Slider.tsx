@@ -32,7 +32,7 @@ const Carousel: React.FC = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<any>(1);
 
   useEffect(() => {
     const swiper = swiperRef.current;
@@ -67,12 +67,18 @@ const Carousel: React.FC = () => {
           </NextButton>
         </Buttons>
       )}
-      {screenWidth < 1000 && <div></div>}
+      {screenWidth < 1000 && (
+        <PrevButton onClick={goPrevSlide}>
+          <Arrow src={arrow} alt="<" />
+        </PrevButton>
+      )}
       <Swiper
         spaceBetween={24}
         slidesPerView={screenWidth > 1000 ? 3 : 1}
         centeredSlides={true}
         loop={true}
+        slidesPerGroupSkip={3}
+        slidesPerGroup={1}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -98,7 +104,11 @@ const Carousel: React.FC = () => {
           }
         )}
       </Swiper>
-      {screenWidth > 1000 && <div></div>}
+      {screenWidth < 1000 && (
+        <NextButton onClick={goNextSlide}>
+          <Arrow src={arrow} alt=">" />
+        </NextButton>
+      )}
     </CarouselContainer>
   );
 };

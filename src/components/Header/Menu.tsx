@@ -18,7 +18,6 @@ interface menuProps {
 
 const Menu: FC<menuProps> = ({ setMenuOpen, menuOpen }) => {
   const [isActive, setIsActive] = useState("");
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [siteIsOpen, setSiteIsOpen] = useState(false);
 
   const handleNavClick = (id: string) => {
@@ -39,7 +38,7 @@ const Menu: FC<menuProps> = ({ setMenuOpen, menuOpen }) => {
     <MenuBar menuOpen={menuOpen}>
       <MenuNavContainer id="menu-bar">
         <CloseMenu onClick={() => handleCloseMenu()}>
-          <img src={x} style={{ width: "14px" }} />
+          <img src={x} style={{ width: "14px" }} alt="x" />
         </CloseMenu>
         <SiteLogo style={{ height: 40 }}>
           <img src={images.logo2} alt="logo" />

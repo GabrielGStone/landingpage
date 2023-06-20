@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin-top: 70px;
   @media (max-width: 1000px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -74,9 +75,16 @@ const CustomButton = styled.button`
   }
 `;
 
-export const NextButton = styled(CustomButton)``;
+export const NextButton = styled(CustomButton)`
+  @media (max-width: 1000px) {
+    width: 150px;
+  }
+`;
 
 export const PrevButton = styled(CustomButton)`
+  @media (max-width: 1000px) {
+    width: 150px;
+  }
   margin-right: 20px;
   transform: rotate(180deg);
 `;
@@ -98,6 +106,8 @@ export const CarouselSlide = styled.div`
 export const CarouselContainer = styled.div`
   @media (max-width: 1000px) {
     display: flex;
+    margin-top: 24px;
+    align-items: center;
     width: 80vw;
   }
 `;
