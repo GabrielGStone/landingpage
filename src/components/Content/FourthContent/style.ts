@@ -34,7 +34,7 @@ export const ArcContainer = styled.div<arcProps>`
   border-top: 2px solid #00aeef;
   flex: 1;
   border-top-left-radius: ${({ right }) => (right ? "30%" : "")};
-  border-top-right-radius: ${({ right }) => (right ? "" : "30%")};
+  border-top-right-radius: ${({ right }) => (!right ? "30%" : "")};
 `;
 
 export const Caps = styled.strong`
